@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		461926F8226FD720009D48F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461926F7226FD720009D48F9 /* AppDelegate.swift */; };
+		461926FA226FD720009D48F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461926F9226FD720009D48F9 /* ViewController.swift */; };
+		461926FD226FD720009D48F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 461926FB226FD720009D48F9 /* Main.storyboard */; };
+		46192700226FD720009D48F9 /* Quopho.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 461926FE226FD720009D48F9 /* Quopho.xcdatamodeld */; };
+		46192702226FD729009D48F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46192701226FD729009D48F9 /* Assets.xcassets */; };
+		46192705226FD729009D48F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46192703226FD729009D48F9 /* LaunchScreen.storyboard */; };
+		46192710226FD72A009D48F9 /* QuophoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4619270F226FD72A009D48F9 /* QuophoTests.swift */; };
+		4619271B226FD72A009D48F9 /* QuophoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4619271A226FD72A009D48F9 /* QuophoUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4619270C226FD72A009D48F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 461926EC226FD720009D48F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 461926F3226FD720009D48F9;
+			remoteInfo = Quopho;
+		};
+		46192717226FD72A009D48F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 461926EC226FD720009D48F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 461926F3226FD720009D48F9;
+			remoteInfo = Quopho;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		461926F4226FD720009D48F9 /* Quopho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quopho.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		461926F7226FD720009D48F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		461926F9226FD720009D48F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		461926FC226FD720009D48F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		461926FF226FD720009D48F9 /* Quopho.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Quopho.xcdatamodel; sourceTree = "<group>"; };
+		46192701226FD729009D48F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		46192704226FD729009D48F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		46192706226FD729009D48F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4619270B226FD72A009D48F9 /* QuophoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuophoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4619270F226FD72A009D48F9 /* QuophoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuophoTests.swift; sourceTree = "<group>"; };
+		46192711226FD72A009D48F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46192716226FD72A009D48F9 /* QuophoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuophoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4619271A226FD72A009D48F9 /* QuophoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuophoUITests.swift; sourceTree = "<group>"; };
+		4619271C226FD72A009D48F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		461926F1226FD720009D48F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46192708226FD72A009D48F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46192713226FD72A009D48F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		461926EB226FD720009D48F9 = {
+			isa = PBXGroup;
+			children = (
+				461926F6226FD720009D48F9 /* Quopho */,
+				4619270E226FD72A009D48F9 /* QuophoTests */,
+				46192719226FD72A009D48F9 /* QuophoUITests */,
+				461926F5226FD720009D48F9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		461926F5226FD720009D48F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				461926F4226FD720009D48F9 /* Quopho.app */,
+				4619270B226FD72A009D48F9 /* QuophoTests.xctest */,
+				46192716226FD72A009D48F9 /* QuophoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		461926F6226FD720009D48F9 /* Quopho */ = {
+			isa = PBXGroup;
+			children = (
+				461926F7226FD720009D48F9 /* AppDelegate.swift */,
+				461926F9226FD720009D48F9 /* ViewController.swift */,
+				461926FB226FD720009D48F9 /* Main.storyboard */,
+				46192701226FD729009D48F9 /* Assets.xcassets */,
+				46192703226FD729009D48F9 /* LaunchScreen.storyboard */,
+				46192706226FD729009D48F9 /* Info.plist */,
+				461926FE226FD720009D48F9 /* Quopho.xcdatamodeld */,
+			);
+			path = Quopho;
+			sourceTree = "<group>";
+		};
+		4619270E226FD72A009D48F9 /* QuophoTests */ = {
+			isa = PBXGroup;
+			children = (
+				4619270F226FD72A009D48F9 /* QuophoTests.swift */,
+				46192711226FD72A009D48F9 /* Info.plist */,
+			);
+			path = QuophoTests;
+			sourceTree = "<group>";
+		};
+		46192719226FD72A009D48F9 /* QuophoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4619271A226FD72A009D48F9 /* QuophoUITests.swift */,
+				4619271C226FD72A009D48F9 /* Info.plist */,
+			);
+			path = QuophoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		461926F3226FD720009D48F9 /* Quopho */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4619271F226FD72A009D48F9 /* Build configuration list for PBXNativeTarget "Quopho" */;
+			buildPhases = (
+				461926F0226FD720009D48F9 /* Sources */,
+				461926F1226FD720009D48F9 /* Frameworks */,
+				461926F2226FD720009D48F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Quopho;
+			productName = Quopho;
+			productReference = 461926F4226FD720009D48F9 /* Quopho.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4619270A226FD72A009D48F9 /* QuophoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46192722226FD72A009D48F9 /* Build configuration list for PBXNativeTarget "QuophoTests" */;
+			buildPhases = (
+				46192707226FD72A009D48F9 /* Sources */,
+				46192708226FD72A009D48F9 /* Frameworks */,
+				46192709226FD72A009D48F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4619270D226FD72A009D48F9 /* PBXTargetDependency */,
+			);
+			name = QuophoTests;
+			productName = QuophoTests;
+			productReference = 4619270B226FD72A009D48F9 /* QuophoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		46192715226FD72A009D48F9 /* QuophoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46192725226FD72A009D48F9 /* Build configuration list for PBXNativeTarget "QuophoUITests" */;
+			buildPhases = (
+				46192712226FD72A009D48F9 /* Sources */,
+				46192713226FD72A009D48F9 /* Frameworks */,
+				46192714226FD72A009D48F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				46192718226FD72A009D48F9 /* PBXTargetDependency */,
+			);
+			name = QuophoUITests;
+			productName = QuophoUITests;
+			productReference = 46192716226FD72A009D48F9 /* QuophoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		461926EC226FD720009D48F9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Cara;
+				TargetAttributes = {
+					461926F3226FD720009D48F9 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					4619270A226FD72A009D48F9 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 461926F3226FD720009D48F9;
+					};
+					46192715226FD72A009D48F9 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 461926F3226FD720009D48F9;
+					};
+				};
+			};
+			buildConfigurationList = 461926EF226FD720009D48F9 /* Build configuration list for PBXProject "Quopho" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 461926EB226FD720009D48F9;
+			productRefGroup = 461926F5226FD720009D48F9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				461926F3226FD720009D48F9 /* Quopho */,
+				4619270A226FD72A009D48F9 /* QuophoTests */,
+				46192715226FD72A009D48F9 /* QuophoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		461926F2226FD720009D48F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46192705226FD729009D48F9 /* LaunchScreen.storyboard in Resources */,
+				46192702226FD729009D48F9 /* Assets.xcassets in Resources */,
+				461926FD226FD720009D48F9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46192709226FD72A009D48F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46192714226FD72A009D48F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		461926F0226FD720009D48F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				461926FA226FD720009D48F9 /* ViewController.swift in Sources */,
+				46192700226FD720009D48F9 /* Quopho.xcdatamodeld in Sources */,
+				461926F8226FD720009D48F9 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46192707226FD72A009D48F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				46192710226FD72A009D48F9 /* QuophoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		46192712226FD72A009D48F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4619271B226FD72A009D48F9 /* QuophoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4619270D226FD72A009D48F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 461926F3226FD720009D48F9 /* Quopho */;
+			targetProxy = 4619270C226FD72A009D48F9 /* PBXContainerItemProxy */;
+		};
+		46192718226FD72A009D48F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 461926F3226FD720009D48F9 /* Quopho */;
+			targetProxy = 46192717226FD72A009D48F9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		461926FB226FD720009D48F9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				461926FC226FD720009D48F9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		46192703226FD729009D48F9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				46192704226FD729009D48F9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4619271D226FD72A009D48F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4619271E226FD72A009D48F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		46192720226FD72A009D48F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 38C47QG4QC;
+				INFOPLIST_FILE = Quopho/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cwegs.Quopho;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		46192721226FD72A009D48F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 38C47QG4QC;
+				INFOPLIST_FILE = Quopho/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cwegs.Quopho;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		46192723226FD72A009D48F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 38C47QG4QC;
+				INFOPLIST_FILE = QuophoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cwegs.QuophoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quopho.app/Quopho";
+			};
+			name = Debug;
+		};
+		46192724226FD72A009D48F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 38C47QG4QC;
+				INFOPLIST_FILE = QuophoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cwegs.QuophoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Quopho.app/Quopho";
+			};
+			name = Release;
+		};
+		46192726226FD72A009D48F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 38C47QG4QC;
+				INFOPLIST_FILE = QuophoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cwegs.QuophoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Quopho;
+			};
+			name = Debug;
+		};
+		46192727226FD72A009D48F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 38C47QG4QC;
+				INFOPLIST_FILE = QuophoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.cwegs.QuophoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Quopho;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		461926EF226FD720009D48F9 /* Build configuration list for PBXProject "Quopho" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4619271D226FD72A009D48F9 /* Debug */,
+				4619271E226FD72A009D48F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4619271F226FD72A009D48F9 /* Build configuration list for PBXNativeTarget "Quopho" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46192720226FD72A009D48F9 /* Debug */,
+				46192721226FD72A009D48F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46192722226FD72A009D48F9 /* Build configuration list for PBXNativeTarget "QuophoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46192723226FD72A009D48F9 /* Debug */,
+				46192724226FD72A009D48F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46192725226FD72A009D48F9 /* Build configuration list for PBXNativeTarget "QuophoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46192726226FD72A009D48F9 /* Debug */,
+				46192727226FD72A009D48F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		461926FE226FD720009D48F9 /* Quopho.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				461926FF226FD720009D48F9 /* Quopho.xcdatamodel */,
+			);
+			currentVersion = 461926FF226FD720009D48F9 /* Quopho.xcdatamodel */;
+			path = Quopho.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 461926EC226FD720009D48F9 /* Project object */;
+}
