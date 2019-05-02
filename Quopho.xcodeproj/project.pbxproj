@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		461926F8226FD720009D48F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461926F7226FD720009D48F9 /* AppDelegate.swift */; };
-		461926FA226FD720009D48F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461926F9226FD720009D48F9 /* ViewController.swift */; };
+		461926FA226FD720009D48F9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 461926F9226FD720009D48F9 /* WelcomeViewController.swift */; };
 		461926FD226FD720009D48F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 461926FB226FD720009D48F9 /* Main.storyboard */; };
 		46192700226FD720009D48F9 /* Quopho.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 461926FE226FD720009D48F9 /* Quopho.xcdatamodeld */; };
 		46192702226FD729009D48F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46192701226FD729009D48F9 /* Assets.xcassets */; };
@@ -37,7 +37,7 @@
 /* Begin PBXFileReference section */
 		461926F4226FD720009D48F9 /* Quopho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quopho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		461926F7226FD720009D48F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		461926F9226FD720009D48F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		461926F9226FD720009D48F9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		461926FC226FD720009D48F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		461926FF226FD720009D48F9 /* Quopho.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Quopho.xcdatamodel; sourceTree = "<group>"; };
 		46192701226FD729009D48F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,8 +99,8 @@
 		461926F6226FD720009D48F9 /* Quopho */ = {
 			isa = PBXGroup;
 			children = (
+				46FBEA05227B9A9200637044 /* Controllers */,
 				461926F7226FD720009D48F9 /* AppDelegate.swift */,
-				461926F9226FD720009D48F9 /* ViewController.swift */,
 				461926FB226FD720009D48F9 /* Main.storyboard */,
 				46192701226FD729009D48F9 /* Assets.xcassets */,
 				46192703226FD729009D48F9 /* LaunchScreen.storyboard */,
@@ -126,6 +126,14 @@
 				4619271C226FD72A009D48F9 /* Info.plist */,
 			);
 			path = QuophoUITests;
+			sourceTree = "<group>";
+		};
+		46FBEA05227B9A9200637044 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				461926F9226FD720009D48F9 /* WelcomeViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				461926FA226FD720009D48F9 /* ViewController.swift in Sources */,
+				461926FA226FD720009D48F9 /* WelcomeViewController.swift in Sources */,
 				46192700226FD720009D48F9 /* Quopho.xcdatamodeld in Sources */,
 				461926F8226FD720009D48F9 /* AppDelegate.swift in Sources */,
 			);

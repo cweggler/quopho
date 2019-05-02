@@ -10,47 +10,52 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Quopho" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="Quopho" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Quopho!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8L-Ph-aSo">
-                                <rect key="frame" x="107" y="126" width="161.5" height="21"/>
+                                <rect key="frame" x="106.5" y="126" width="162" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sd7-cb-0aE">
-                                <rect key="frame" x="113" y="265" width="149" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sd7-cb-0aE">
+                                <rect key="frame" x="113" y="266" width="149" height="30"/>
                                 <state key="normal" title="Create a new Quopho"/>
                                 <connections>
+                                    <action selector="createNew:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lwv-QD-f01"/>
                                     <segue destination="c7f-ss-hBs" kind="show" id="hZ1-sX-B1J"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3j-2e-6Pp">
-                                <rect key="frame" x="168" y="341" width="24" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3j-2e-6Pp">
+                                <rect key="frame" x="175.5" y="340" width="24" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mi0-QF-sie">
-                                <rect key="frame" x="126" y="432" width="123" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mi0-QF-sie">
+                                <rect key="frame" x="126" y="408" width="123" height="30"/>
                                 <state key="normal" title="See my creations!"/>
                                 <connections>
+                                    <action selector="seeCreations:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MAb-IK-QgB"/>
                                     <segue destination="CxV-jx-wmm" kind="show" id="YuQ-ft-PfJ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="mi0-QF-sie" firstAttribute="top" secondItem="n3j-2e-6Pp" secondAttribute="bottom" constant="47" id="4A9-bo-FUe"/>
+                            <constraint firstItem="n3j-2e-6Pp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9mc-qj-RYZ"/>
+                            <constraint firstItem="Sd7-cb-0aE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DuB-4v-ehe"/>
+                            <constraint firstItem="n3j-2e-6Pp" firstAttribute="top" secondItem="Sd7-cb-0aE" secondAttribute="bottom" constant="44" id="Geb-hc-ZSL"/>
                             <constraint firstItem="mi0-QF-sie" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V4f-AJ-F5V"/>
                             <constraint firstItem="h8L-Ph-aSo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fhQ-yE-Caw"/>
+                            <constraint firstItem="Sd7-cb-0aE" firstAttribute="top" secondItem="h8L-Ph-aSo" secondAttribute="bottom" constant="119" id="uNe-Kk-PK9"/>
                             <constraint firstItem="h8L-Ph-aSo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="62" id="xPH-jy-vt5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -156,7 +161,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGY-Gn-eLs">
-                                <rect key="frame" x="114" y="347" width="146" height="30"/>
+                                <rect key="frame" x="114" y="348" width="146" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Yes! I want this quote"/>
                                 <connections>
@@ -164,7 +169,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0S2-Fi-kp5">
-                                <rect key="frame" x="77" y="441" width="220" height="30"/>
+                                <rect key="frame" x="77" y="444" width="220" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Not for me, Show another quote"/>
                             </button>

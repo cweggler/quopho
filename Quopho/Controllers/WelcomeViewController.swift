@@ -8,13 +8,22 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class WelcomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
+    @IBAction func createNew(_ sender: Any) {
+    }
+    
+    @IBAction func seeCreations(_ sender: Any) {
+    }
+    
+    // TODO: prepare for segue code!!
+    
+    
 
 }
 
