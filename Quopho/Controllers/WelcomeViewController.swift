@@ -21,8 +21,18 @@ class WelcomeViewController: UIViewController {
     @IBAction func seeCreations(_ sender: Any) {
     }
     
-    // TODO: prepare for segue code!!
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "createNew" {
+            //TODO: destination
+        }
+        else if segue.identifier == "seeCollection" {
+            //TODO: destination
+        }
+        else {
+            print("What type of segue is this?")
+        }
+    }
     
 
 }

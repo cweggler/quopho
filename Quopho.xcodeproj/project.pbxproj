@@ -15,6 +15,7 @@
 		46192705226FD729009D48F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46192703226FD729009D48F9 /* LaunchScreen.storyboard */; };
 		46192710226FD72A009D48F9 /* QuophoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4619270F226FD72A009D48F9 /* QuophoTests.swift */; };
 		4619271B226FD72A009D48F9 /* QuophoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4619271A226FD72A009D48F9 /* QuophoUITests.swift */; };
+		4645970E227C73D600F0D24C /* QuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4645970D227C73D600F0D24C /* QuoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		46192716226FD72A009D48F9 /* QuophoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuophoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4619271A226FD72A009D48F9 /* QuophoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuophoUITests.swift; sourceTree = "<group>"; };
 		4619271C226FD72A009D48F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4645970D227C73D600F0D24C /* QuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				461926F9226FD720009D48F9 /* WelcomeViewController.swift */,
+				4645970D227C73D600F0D24C /* QuoteViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				461926FA226FD720009D48F9 /* WelcomeViewController.swift in Sources */,
+				4645970E227C73D600F0D24C /* QuoteViewController.swift in Sources */,
 				46192700226FD720009D48F9 /* Quopho.xcdatamodeld in Sources */,
 				461926F8226FD720009D48F9 /* AppDelegate.swift in Sources */,
 			);

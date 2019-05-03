@@ -29,7 +29,7 @@
                                 <state key="normal" title="Create a new Quopho"/>
                                 <connections>
                                     <action selector="createNew:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lwv-QD-f01"/>
-                                    <segue destination="c7f-ss-hBs" kind="show" id="hZ1-sX-B1J"/>
+                                    <segue destination="c7f-ss-hBs" kind="show" identifier="createNew" id="hZ1-sX-B1J"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3j-2e-6Pp">
@@ -43,7 +43,7 @@
                                 <state key="normal" title="See my creations!"/>
                                 <connections>
                                     <action selector="seeCreations:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MAb-IK-QgB"/>
-                                    <segue destination="CxV-jx-wmm" kind="show" id="YuQ-ft-PfJ"/>
+                                    <segue destination="CxV-jx-wmm" kind="show" identifier="seeCollection" id="YuQ-ft-PfJ"/>
                                 </connections>
                             </button>
                         </subviews>
