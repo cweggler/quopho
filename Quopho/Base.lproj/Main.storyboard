@@ -165,13 +165,13 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGY-Gn-eLs">
                                 <rect key="frame" x="114.5" y="434" width="146" height="30"/>
                                 <state key="normal" title="Yes! I want this quote"/>
-                                <connections>
-                                    <segue destination="cEd-bF-ELg" kind="show" id="x5Z-bI-gMz"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0S2-Fi-kp5">
                                 <rect key="frame" x="77.5" y="519" width="220" height="30"/>
                                 <state key="normal" title="Not for me, Show another quote"/>
+                                <connections>
+                                    <action selector="newQuoteButtonTapped:" destination="c7f-ss-hBs" eventType="touchUpInside" id="xO8-gX-dPV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -186,6 +186,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pET-RJ-9Vl"/>
                     </view>
+                    <connections>
+                        <outlet property="newQuoteButton" destination="0S2-Fi-kp5" id="a2Z-X0-cTy"/>
+                        <outlet property="quoteTextView" destination="P1V-ie-cot" id="hbS-z5-JT3"/>
+                        <outlet property="saveQuoteButton" destination="vGY-Gn-eLs" id="Vvw-ss-bVu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HYj-4J-Ysj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

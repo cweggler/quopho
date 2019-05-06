@@ -11,20 +11,62 @@ import CoreData
 
 class QuoteViewController: UIViewController, NSFetchedResultsControllerDelegate, QuoteDelegate {
     
+    @IBOutlet var quoteTextView: UITextView!
+    @IBOutlet var saveQuoteButton: UIButton!
+    @IBOutlet var newQuoteButton: UIButton!
+    
     
     //var managedContext: NSManagedObjectContext?
+    let quoteService = ForismaticAPIService()
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        saveQuoteButton.isHidden = true
+        newQuoteButton.isHidden = true
+        
+        quoteService.quoteDelegate = self
+        quoteService.getRandomQuote()
+    
     }
     
+    @IBAction func newQuoteButtonTapped(_ sender: Any) {
+        newQuoteButton.isEnabled = false
+        quoteService.getRandomQuote()
+    }
+    
+    
     func quoteFetched(quote: QuoteResult) {
-        <#code#>
+        DispatchQueue.main.async {
+            let quoteText = "<p>\(quote.quoteText)<p><em>\(quote.quoteAuthor)</em></p>"
+            let data = Data(quoteText.utf8)
+            
+            
+            let attributedString = try? NSAttributedString(
+                data: data,
+                options:
+                [.documentType: NSAttributedString.DocumentType.html,
+                 .characterEncoding: String.Encoding.utf8.rawValue
+                ],
+                documentAttributes: nil)
+            
+            self.quoteTextView.attributedText = attributedString
+            self.saveQuoteButton.isHidden = false
+            self.saveQuoteButton.isEnabled = true
+            self.newQuoteButton.isHidden = false
+            self.newQuoteButton.isEnabled = true
+            
+            
+        }
     }
     
     func quoteFetchError(because quoteError: QuoteError) {
-        <#code#>
+        let alert = UIAlertController(title: "Error", message: "Error fetching quote. \(quoteError.message)", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+        present(alert, animated: true)
+        newQuoteButton.isHidden = false
     }
     
 }
