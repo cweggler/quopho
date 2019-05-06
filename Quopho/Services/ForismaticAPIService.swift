@@ -14,7 +14,7 @@ class ForismaticAPIService {
     var quoteDelegate: QuoteDelegate?
     
     //TODO: figure out URL components if you can
-    let urlString = "http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en"
+    let urlString = "https://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en"
     
     func getRandomQuote() {
         guard let delegate = quoteDelegate else {
@@ -35,15 +35,16 @@ class ForismaticAPIService {
             
             if let quoteData = data {
                 let decoder = JSONDecoder()
-                if let quote = try? decoder.decode([QuoteResult].self, from: quoteData) {
-                    if let randomQuote = quote.first {
-                        delegate.quoteFetched(quote: randomQuote)
-                    } else {
-                        delegate.quoteFetchError(because: QuoteError(message: "No quotes returned"))
-                    }
-                } else {
-                    delegate.quoteFetchError(because: QuoteError(message: "Unable to decode response from quote server"))
+                do {
+                    let quoteResult = try decoder.decode(QuoteResult.self, from: quoteData)
+                     delegate.quoteFetched(quote: quoteResult)
                 }
+                catch {
+                    delegate.quoteFetchError(because: QuoteError(message: "No quotes returned"))
+                }
+            }
+            else {
+                delegate.quoteFetchError(because: QuoteError(message: "Unable to decode response from quote server"))
             }
         })
         
