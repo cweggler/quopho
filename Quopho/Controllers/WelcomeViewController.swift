@@ -24,10 +24,10 @@ class WelcomeViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "createNew" {
-            //TODO: destination
+            _ = segue.destination as! QuoteViewController
         }
         else if segue.identifier == "seeCollection" {
-            //TODO: destination
+            _ = segue.destination as! QuophoCollectionViewController
         }
         else {
             print("What type of segue is this?")

@@ -7,11 +7,24 @@
 //
 
 import UIKit
+import CoreData
 
-class QuoteViewController: UIViewController {
+class QuoteViewController: UIViewController, NSFetchedResultsControllerDelegate, QuoteDelegate {
+    
+    
+    //var managedContext: NSManagedObjectContext?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    func quoteFetched(quote: QuoteResult) {
+        <#code#>
+    }
+    
+    func quoteFetchError(because quoteError: QuoteError) {
+        <#code#>
+    }
+    
 }

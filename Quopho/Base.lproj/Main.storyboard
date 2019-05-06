@@ -81,7 +81,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="eBp-BU-llY">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="quophoCell" id="eBp-BU-llY">
                                 <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -145,42 +145,51 @@
             </objects>
             <point key="canvasLocation" x="1785" y="869"/>
         </scene>
-        <!--View Controller-->
+        <!--Quote View Controller-->
         <scene sceneID="aCy-7k-Ocv">
             <objects>
-                <viewController id="c7f-ss-hBs" sceneMemberID="viewController">
+                <viewController id="c7f-ss-hBs" customClass="QuoteViewController" customModule="Quopho" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dpP-tr-eGP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="This quote is life changing! I can't wait to have it on my app." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="P1V-ie-cot">
-                                <rect key="frame" x="67" y="153" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="This quote is life changing! I can't wait to have it on my app." translatesAutoresizingMaskIntoConstraints="NO" id="P1V-ie-cot">
+                                <rect key="frame" x="40" y="89" width="295" height="320"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="320" id="oHE-4h-aWA"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGY-Gn-eLs">
-                                <rect key="frame" x="114" y="348" width="146" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGY-Gn-eLs">
+                                <rect key="frame" x="114.5" y="434" width="146" height="30"/>
                                 <state key="normal" title="Yes! I want this quote"/>
                                 <connections>
                                     <segue destination="cEd-bF-ELg" kind="show" id="x5Z-bI-gMz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0S2-Fi-kp5">
-                                <rect key="frame" x="77" y="444" width="220" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0S2-Fi-kp5">
+                                <rect key="frame" x="77.5" y="519" width="220" height="30"/>
                                 <state key="normal" title="Not for me, Show another quote"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="P1V-ie-cot" firstAttribute="top" secondItem="pET-RJ-9Vl" secondAttribute="top" constant="25" id="1Pg-T4-W9i"/>
+                            <constraint firstItem="vGY-Gn-eLs" firstAttribute="top" secondItem="P1V-ie-cot" secondAttribute="bottom" constant="25" id="8JO-y0-ipE"/>
+                            <constraint firstItem="P1V-ie-cot" firstAttribute="leading" secondItem="pET-RJ-9Vl" secondAttribute="leading" constant="40" id="MbJ-x9-PwN"/>
+                            <constraint firstItem="0S2-Fi-kp5" firstAttribute="top" secondItem="vGY-Gn-eLs" secondAttribute="bottom" constant="55" id="Y7R-0p-NAg"/>
+                            <constraint firstItem="vGY-Gn-eLs" firstAttribute="centerX" secondItem="dpP-tr-eGP" secondAttribute="centerX" id="Ygo-IO-IuP"/>
+                            <constraint firstItem="pET-RJ-9Vl" firstAttribute="trailing" secondItem="P1V-ie-cot" secondAttribute="trailing" constant="40" id="uLD-MS-QQ2"/>
+                            <constraint firstItem="0S2-Fi-kp5" firstAttribute="centerX" secondItem="dpP-tr-eGP" secondAttribute="centerX" id="zVC-hf-y9F"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="pET-RJ-9Vl"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HYj-4J-Ysj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1863" y="134"/>
+            <point key="canvasLocation" x="1861.5999999999999" y="133.5832083958021"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="AcI-Fh-i2C">
