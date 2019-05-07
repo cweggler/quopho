@@ -16,7 +16,8 @@ class QuoteViewController: UIViewController, NSFetchedResultsControllerDelegate,
     @IBOutlet var newQuoteButton: UIButton!
     
     
-    //var managedContext: NSManagedObjectContext?
+    // Ask app delegate for managedContext
+    //var managedContext: NSManagedObjectContext? when you get your picture
     let quoteService = ForismaticAPIService()
     
     
@@ -36,6 +37,7 @@ class QuoteViewController: UIViewController, NSFetchedResultsControllerDelegate,
         newQuoteButton.isEnabled = false
         quoteService.getRandomQuote()
     }
+    
     
     
     func quoteFetched(quote: QuoteResult) {
@@ -68,5 +70,6 @@ class QuoteViewController: UIViewController, NSFetchedResultsControllerDelegate,
         present(alert, animated: true)
         newQuoteButton.isHidden = false
     }
+    
     
 }

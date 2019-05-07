@@ -165,6 +165,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGY-Gn-eLs">
                                 <rect key="frame" x="114.5" y="434" width="146" height="30"/>
                                 <state key="normal" title="Yes! I want this quote"/>
+                                <connections>
+                                    <segue destination="cEd-bF-ELg" kind="show" identifier="keepQuote" id="eLv-Nk-EJW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0S2-Fi-kp5">
                                 <rect key="frame" x="77.5" y="519" width="220" height="30"/>
@@ -204,7 +207,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MWm-oE-ykU">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MWm-oE-ykU">
                                 <rect key="frame" x="0.0" y="120" width="375" height="547"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="i18-81-ifz">
@@ -214,7 +217,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="4YV-67-Hyf">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="4YV-67-Hyf">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -234,17 +237,20 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search for nice things..." translatesAutoresizingMaskIntoConstraints="NO" id="qix-Au-PLY">
+                            <searchBar contentMode="redraw" placeholder="Search for nice things..." translatesAutoresizingMaskIntoConstraints="NO" id="qix-Au-PLY">
                                 <rect key="frame" x="0.0" y="64" width="375" height="56"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="MWm-oE-ykU" firstAttribute="leading" secondItem="KVv-eA-zbT" secondAttribute="leading" id="GW1-4b-6oS"/>
-                            <constraint firstItem="MWm-oE-ykU" firstAttribute="trailing" secondItem="KVv-eA-zbT" secondAttribute="trailing" id="Rhc-3j-P6K"/>
-                            <constraint firstItem="MWm-oE-ykU" firstAttribute="bottom" secondItem="KVv-eA-zbT" secondAttribute="bottom" id="duK-Tl-tGP"/>
+                            <constraint firstItem="qix-Au-PLY" firstAttribute="leading" secondItem="KVv-eA-zbT" secondAttribute="leading" id="6FH-Uw-mke"/>
+                            <constraint firstItem="MWm-oE-ykU" firstAttribute="trailing" secondItem="KVv-eA-zbT" secondAttribute="trailing" id="7H4-Fp-4hn"/>
+                            <constraint firstItem="qix-Au-PLY" firstAttribute="top" secondItem="KVv-eA-zbT" secondAttribute="top" id="HZ1-H5-ziX"/>
+                            <constraint firstItem="MWm-oE-ykU" firstAttribute="bottom" secondItem="KVv-eA-zbT" secondAttribute="bottom" id="Qew-W2-vTC"/>
+                            <constraint firstItem="MWm-oE-ykU" firstAttribute="top" secondItem="qix-Au-PLY" secondAttribute="bottom" id="RWo-gn-02x"/>
+                            <constraint firstItem="MWm-oE-ykU" firstAttribute="leading" secondItem="KVv-eA-zbT" secondAttribute="leading" id="UbB-2a-fW6"/>
+                            <constraint firstItem="qix-Au-PLY" firstAttribute="trailing" secondItem="KVv-eA-zbT" secondAttribute="trailing" id="biZ-Jz-NF9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="KVv-eA-zbT"/>
                     </view>
@@ -265,9 +271,8 @@
                                 <rect key="frame" x="0.0" y="108" width="375" height="559"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaS-Vl-m1D">
-                                <rect key="frame" x="164" y="70" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaS-Vl-m1D">
+                                <rect key="frame" x="170.5" y="70" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <segue destination="KLH-BP-bTS" kind="show" id="x4f-G7-h47"/>
@@ -275,6 +280,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kaS-Vl-m1D" firstAttribute="top" secondItem="236-lT-jgk" secondAttribute="top" constant="6" id="ja1-mS-J1H"/>
+                            <constraint firstItem="kaS-Vl-m1D" firstAttribute="centerX" secondItem="Yvp-IG-Q08" secondAttribute="centerX" id="pr9-M6-tkx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="236-lT-jgk"/>
                     </view>
                 </viewController>
@@ -308,23 +317,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Most Inspiring Quotes ever!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lgo-jT-N7P">
-                                <rect key="frame" x="16" y="71" width="343" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Most Inspiring Quotes ever!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lgo-jT-N7P">
+                                <rect key="frame" x="0.0" y="71" width="375" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="JHL-26-we8"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1td-kR-HFs">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1td-kR-HFs">
                                 <rect key="frame" x="0.0" y="207" width="375" height="460"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="EM3-cg-dxD" firstAttribute="trailing" secondItem="1td-kR-HFs" secondAttribute="trailing" id="2hE-HW-2JW"/>
+                            <constraint firstItem="1td-kR-HFs" firstAttribute="top" secondItem="Lgo-jT-N7P" secondAttribute="bottom" constant="8" symbolic="YES" id="7OS-k0-h83"/>
+                            <constraint firstItem="1td-kR-HFs" firstAttribute="trailing" secondItem="EM3-cg-dxD" secondAttribute="trailing" id="9ek-dm-KWv"/>
+                            <constraint firstItem="1td-kR-HFs" firstAttribute="bottom" secondItem="EM3-cg-dxD" secondAttribute="bottom" id="BaC-1b-7NN"/>
+                            <constraint firstItem="Lgo-jT-N7P" firstAttribute="top" secondItem="EM3-cg-dxD" secondAttribute="top" constant="7" id="IWb-5I-A8a"/>
+                            <constraint firstItem="Lgo-jT-N7P" firstAttribute="leading" secondItem="1td-kR-HFs" secondAttribute="leading" id="WVb-eu-wT7"/>
                             <constraint firstItem="EM3-cg-dxD" firstAttribute="bottom" secondItem="1td-kR-HFs" secondAttribute="bottom" id="Y6z-xA-jte"/>
+                            <constraint firstItem="1td-kR-HFs" firstAttribute="leading" secondItem="EM3-cg-dxD" secondAttribute="leading" id="hvm-Ah-cHx"/>
                             <constraint firstItem="EM3-cg-dxD" firstAttribute="bottom" secondItem="1td-kR-HFs" secondAttribute="bottom" id="lG9-fL-C6z"/>
                             <constraint firstItem="1td-kR-HFs" firstAttribute="leading" secondItem="EM3-cg-dxD" secondAttribute="leading" id="nBL-Xk-Wds"/>
+                            <constraint firstItem="Lgo-jT-N7P" firstAttribute="trailing" secondItem="1td-kR-HFs" secondAttribute="trailing" id="qnd-0H-XiT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EM3-cg-dxD"/>
                     </view>
