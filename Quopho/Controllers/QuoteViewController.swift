@@ -25,7 +25,7 @@ class QuoteViewController: UIViewController, QuoteDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "Quotes"
+        navigationItem.title = "Find a Quote"
         
         saveQuoteButton.isHidden = true
         newQuoteButton.isHidden = true

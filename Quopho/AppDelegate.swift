@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            }
 //        }
         
-        // TODO: make the managedContext the same in all viewControllers
+        // TODO: make the managedContext in the viewControllers that has that saved data or saves
         
         
         return true
