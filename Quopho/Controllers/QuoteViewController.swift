@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import CoreData
 
-class QuoteViewController: UIViewController, NSFetchedResultsControllerDelegate, QuoteDelegate {
+class QuoteViewController: UIViewController, QuoteDelegate {
     
     @IBOutlet var quoteTextView: UITextView!
     @IBOutlet var saveQuoteButton: UIButton!
@@ -18,12 +17,15 @@ class QuoteViewController: UIViewController, NSFetchedResultsControllerDelegate,
     
     // Ask app delegate for managedContext
     //var managedContext: NSManagedObjectContext? when you get your picture
+    var quoteResult: QuoteResult?
     let quoteService = ForismaticAPIService()
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.title = "Quotes"
         
         saveQuoteButton.isHidden = true
         newQuoteButton.isHidden = true
@@ -38,10 +40,15 @@ class QuoteViewController: UIViewController, NSFetchedResultsControllerDelegate,
         quoteService.getRandomQuote()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! PhotoCollectionViewController
+        destination.quoteResult = quoteResult
+    }
     
     
     func quoteFetched(quote: QuoteResult) {
         DispatchQueue.main.async {
+            self.quoteResult = quote
             let quoteText = "<p>\(quote.quoteText)<p><em>\(quote.quoteAuthor)</em></p>"
             let data = Data(quoteText.utf8)
             

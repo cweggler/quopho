@@ -199,10 +199,10 @@
             </objects>
             <point key="canvasLocation" x="1861.5999999999999" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Photo Collection View Controller-->
         <scene sceneID="AcI-Fh-i2C">
             <objects>
-                <viewController id="cEd-bF-ELg" sceneMemberID="viewController">
+                <viewController id="cEd-bF-ELg" customClass="PhotoCollectionViewController" customModule="Quopho" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ptZ-uI-ZRM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

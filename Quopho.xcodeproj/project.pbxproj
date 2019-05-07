@@ -21,6 +21,11 @@
 		46459716227FCFEB00F0D24C /* QuoteResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46459715227FCFEB00F0D24C /* QuoteResult.swift */; };
 		46459718227FD43800F0D24C /* QuoteDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46459717227FD43800F0D24C /* QuoteDelegate.swift */; };
 		4645971A227FD47D00F0D24C /* QuoteError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46459719227FD47D00F0D24C /* QuoteError.swift */; };
+		464597202282442E00F0D24C /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4645971F2282442E00F0D24C /* PhotoCollectionViewController.swift */; };
+		4645972222824CA000F0D24C /* FlickrService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4645972122824CA000F0D24C /* FlickrService.swift */; };
+		4645972422824D8300F0D24C /* FlickrPhotoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4645972322824D8300F0D24C /* FlickrPhotoData.swift */; };
+		4645972622824DE700F0D24C /* FlickrImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4645972522824DE700F0D24C /* FlickrImage.swift */; };
+		4645972822824E5500F0D24C /* FlickrPhotoSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4645972722824E5500F0D24C /* FlickrPhotoSet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +66,11 @@
 		46459715227FCFEB00F0D24C /* QuoteResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteResult.swift; sourceTree = "<group>"; };
 		46459717227FD43800F0D24C /* QuoteDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteDelegate.swift; sourceTree = "<group>"; };
 		46459719227FD47D00F0D24C /* QuoteError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteError.swift; sourceTree = "<group>"; };
+		4645971F2282442E00F0D24C /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
+		4645972122824CA000F0D24C /* FlickrService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrService.swift; sourceTree = "<group>"; };
+		4645972322824D8300F0D24C /* FlickrPhotoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhotoData.swift; sourceTree = "<group>"; };
+		4645972522824DE700F0D24C /* FlickrImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrImage.swift; sourceTree = "<group>"; };
+		4645972722824E5500F0D24C /* FlickrPhotoSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhotoSet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				46459711227FB23700F0D24C /* ForismaticAPIService.swift */,
+				4645972122824CA000F0D24C /* FlickrService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -155,6 +166,9 @@
 			children = (
 				46459715227FCFEB00F0D24C /* QuoteResult.swift */,
 				46459719227FD47D00F0D24C /* QuoteError.swift */,
+				4645972322824D8300F0D24C /* FlickrPhotoData.swift */,
+				4645972522824DE700F0D24C /* FlickrImage.swift */,
+				4645972722824E5500F0D24C /* FlickrPhotoSet.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -163,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				461926F9226FD720009D48F9 /* WelcomeViewController.swift */,
+				4645971F2282442E00F0D24C /* PhotoCollectionViewController.swift */,
 				4645970F227C755500F0D24C /* QuophoCollectionViewController.swift */,
 				4645970D227C73D600F0D24C /* QuoteViewController.swift */,
 				46459717227FD43800F0D24C /* QuoteDelegate.swift */,
@@ -303,13 +318,18 @@
 			files = (
 				461926FA226FD720009D48F9 /* WelcomeViewController.swift in Sources */,
 				4645971A227FD47D00F0D24C /* QuoteError.swift in Sources */,
+				4645972222824CA000F0D24C /* FlickrService.swift in Sources */,
+				4645972422824D8300F0D24C /* FlickrPhotoData.swift in Sources */,
 				46459712227FB23700F0D24C /* ForismaticAPIService.swift in Sources */,
 				4645970E227C73D600F0D24C /* QuoteViewController.swift in Sources */,
+				4645972822824E5500F0D24C /* FlickrPhotoSet.swift in Sources */,
 				46192700226FD720009D48F9 /* Quopho.xcdatamodeld in Sources */,
 				46459710227C755500F0D24C /* QuophoCollectionViewController.swift in Sources */,
 				46459716227FCFEB00F0D24C /* QuoteResult.swift in Sources */,
 				461926F8226FD720009D48F9 /* AppDelegate.swift in Sources */,
+				4645972622824DE700F0D24C /* FlickrImage.swift in Sources */,
 				46459718227FD43800F0D24C /* QuoteDelegate.swift in Sources */,
+				464597202282442E00F0D24C /* PhotoCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
