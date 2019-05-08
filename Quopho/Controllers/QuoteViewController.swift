@@ -41,8 +41,10 @@ class QuoteViewController: UIViewController, QuoteDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as! PhotoCollectionViewController
-        destination.quoteResult = quoteResult
+        if segue.identifier == "keepQuote" {
+            let destination = segue.destination as! PhotoViewController
+            destination.quoteResult = quoteResult
+        }
     }
     
     
