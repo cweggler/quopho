@@ -11,7 +11,7 @@ import UIKit
 class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     var quoteResult: QuoteResult?
-    let reuseIdentifier = "photoCell"
+    let reuseIdentifier = "UIImageCollectionViewCell"
     var searchTerm = "nature"
     
     // global variable to retrieve data properly
@@ -26,6 +26,9 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
         super.viewDidLoad()
         
         navigationItem.title = "Find a photo"
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
         
         flickrservice.searchPhotos(query: searchTerm) { ( photos: [FlickrPhotoData]?, error: Error?) -> Void in
             
