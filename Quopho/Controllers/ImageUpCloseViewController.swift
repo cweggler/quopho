@@ -20,7 +20,6 @@ class ImageUpCloseViewController: UIViewController {
         
         navigationItem.title = "Photo"
         
-        let photoData = image!.photoData
         let url = image!.fullURL
         
         flickrService.downloadImage(url: url!) { (image: UIImage?, error: Error?) -> Void in
