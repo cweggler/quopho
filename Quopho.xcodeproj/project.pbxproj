@@ -29,6 +29,7 @@
 		4645972A2282505C00F0D24C /* ErrorAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464597292282505C00F0D24C /* ErrorAlertController.swift */; };
 		4645972E228251DF00F0D24C /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4645972D228251DF00F0D24C /* PhotoCell.swift */; };
 		4649BC592283B929007A78DC /* ImageUpCloseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4649BC582283B929007A78DC /* ImageUpCloseViewController.swift */; };
+		4649BC5B2283C714007A78DC /* QuophoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4649BC5A2283C714007A78DC /* QuophoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		464597292282505C00F0D24C /* ErrorAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertController.swift; sourceTree = "<group>"; };
 		4645972D228251DF00F0D24C /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		4649BC582283B929007A78DC /* ImageUpCloseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUpCloseViewController.swift; sourceTree = "<group>"; };
+		4649BC5A2283C714007A78DC /* QuophoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuophoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +200,7 @@
 				4645970F227C755500F0D24C /* QuophoCollectionViewController.swift */,
 				4645970D227C73D600F0D24C /* QuoteViewController.swift */,
 				4649BC582283B929007A78DC /* ImageUpCloseViewController.swift */,
+				4649BC5A2283C714007A78DC /* QuophoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 			files = (
 				461926FA226FD720009D48F9 /* WelcomeViewController.swift in Sources */,
 				4645971A227FD47D00F0D24C /* QuoteError.swift in Sources */,
+				4649BC5B2283C714007A78DC /* QuophoViewController.swift in Sources */,
 				4645972222824CA000F0D24C /* FlickrService.swift in Sources */,
 				4645972422824D8300F0D24C /* FlickrPhotoData.swift in Sources */,
 				4645972E228251DF00F0D24C /* PhotoCell.swift in Sources */,

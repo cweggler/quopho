@@ -19,8 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
 //        let managedContext = persistentContainer.viewContext
-        let navController = window!.rootViewController as! UINavigationController
-        let viewControllers = navController.viewControllers // all the View controllers managed by the navController
+//        let navController = window!.rootViewController as! UINavigationController
+//        let viewControllers = navController.viewControllers // all the View controllers managed by the navController
         
 //        for controller in viewControllers {
 //            if let conrtoller = controller as? QuoteViewController {

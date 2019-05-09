@@ -15,8 +15,6 @@ class QuoteViewController: UIViewController, QuoteDelegate {
     @IBOutlet var newQuoteButton: UIButton!
     
     
-    // Ask app delegate for managedContext
-    //var managedContext: NSManagedObjectContext? when you get your picture
     var quoteResult: QuoteResult?
     let quoteService = ForismaticAPIService()
     

@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import CoreData
 
 class ImageUpCloseViewController: UIViewController {
     
+    
+    // to handle the Core Data you need a NSManagedObjectContext
+    var managedContext: NSManagedObjectContext?
     var image: FlickrImage?
     var flickrService = FlickrService()
     
@@ -19,8 +23,12 @@ class ImageUpCloseViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.title = "Photo"
-        
         let url = image!.fullURL
+        
+        // Ask app delegate for the persistentContainer. TODO: set this up in AppDelegate so not needed
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        managedContext = appDelegate!.persistentContainer.viewContext
+        
         
         flickrService.downloadImage(url: url!) { (image: UIImage?, error: Error?) -> Void in
             
@@ -36,4 +44,18 @@ class ImageUpCloseViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func saveButtonTapped(_ sender: Any) {
+        // this is where you will save to CoreData
+        
+        let quopho = QuotePhoto(context: managedContext!)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "saveQuopho" {
+            let destination = segue.destination as! QuophoViewController
+        }
+    }
+    
 }
