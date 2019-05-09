@@ -28,6 +28,7 @@
 		4645972822824E5500F0D24C /* FlickrPhotoSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4645972722824E5500F0D24C /* FlickrPhotoSet.swift */; };
 		4645972A2282505C00F0D24C /* ErrorAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464597292282505C00F0D24C /* ErrorAlertController.swift */; };
 		4645972E228251DF00F0D24C /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4645972D228251DF00F0D24C /* PhotoCell.swift */; };
+		4649BC592283B929007A78DC /* ImageUpCloseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4649BC582283B929007A78DC /* ImageUpCloseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		4645972722824E5500F0D24C /* FlickrPhotoSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhotoSet.swift; sourceTree = "<group>"; };
 		464597292282505C00F0D24C /* ErrorAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorAlertController.swift; sourceTree = "<group>"; };
 		4645972D228251DF00F0D24C /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		4649BC582283B929007A78DC /* ImageUpCloseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUpCloseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 				4645971F2282442E00F0D24C /* PhotoViewController.swift */,
 				4645970F227C755500F0D24C /* QuophoCollectionViewController.swift */,
 				4645970D227C73D600F0D24C /* QuoteViewController.swift */,
+				4649BC582283B929007A78DC /* ImageUpCloseViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				4645972E228251DF00F0D24C /* PhotoCell.swift in Sources */,
 				46459712227FB23700F0D24C /* ForismaticAPIService.swift in Sources */,
 				4645972A2282505C00F0D24C /* ErrorAlertController.swift in Sources */,
+				4649BC592283B929007A78DC /* ImageUpCloseViewController.swift in Sources */,
 				4645970E227C73D600F0D24C /* QuoteViewController.swift in Sources */,
 				4645972822824E5500F0D24C /* FlickrPhotoSet.swift in Sources */,
 				46192700226FD720009D48F9 /* Quopho.xcdatamodeld in Sources */,

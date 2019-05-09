@@ -232,7 +232,7 @@
                                         </view>
                                         <connections>
                                             <outlet property="image" destination="lqf-ZP-gsW" id="6Yp-2o-SAz"/>
-                                            <segue destination="11e-mf-AQi" kind="show" id="OaR-eM-D2p"/>
+                                            <segue destination="11e-mf-AQi" kind="show" identifier="showImage" id="OaR-eM-D2p"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -265,10 +265,10 @@
             </objects>
             <point key="canvasLocation" x="2652" y="131.78410794602701"/>
         </scene>
-        <!--View Controller-->
+        <!--Image Up Close View Controller-->
         <scene sceneID="RNR-Ru-ad2">
             <objects>
-                <viewController id="11e-mf-AQi" sceneMemberID="viewController">
+                <viewController id="11e-mf-AQi" customClass="ImageUpCloseViewController" customModule="Quopho" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yvp-IG-Q08">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -292,6 +292,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="236-lT-jgk"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="z0c-FO-3yK" id="b4H-94-aaK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OFs-Bg-CNd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

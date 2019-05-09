@@ -14,6 +14,9 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
     let reuseIdentifier = "UIImageCollectionViewCell"
     var searchTerm = "nature"
     
+    //TODO: Add the Search tool functionality
+    //TODO: Add the ability to scroll so it shows more pictures
+    
     // global variable to retrieve data properly
     var photoSet: FlickrPhotoSet?
     
@@ -87,6 +90,16 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
             DispatchQueue.main.async {
                 self.collectionView.reloadItems(at: [IndexPath(row: index, section: 0)])
             }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showImage" {
+            let selectedIndex = collectionView.indexPathsForSelectedItems?.first?.row
+            let selectedImage = photoSet!.images[selectedIndex!]
+            let destination = segue.destination as! ImageUpCloseViewController
+            destination.image = selectedImage 
+            
         }
     }
     
