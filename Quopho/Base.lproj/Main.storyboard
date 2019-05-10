@@ -282,7 +282,7 @@
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveButtonTapped:" destination="11e-mf-AQi" eventType="touchUpInside" id="d5S-RK-OJy"/>
-                                    <segue destination="KLH-BP-bTS" kind="show" identifier="saveQuopho" id="x4f-G7-h47"/>
+                                    <segue destination="CxV-jx-wmm" kind="show" identifier="saveQuopho" id="5HU-tP-6qT"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -319,47 +319,8 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="792.95352323838085"/>
         </scene>
-        <!--Quopho View Contorller-->
-        <scene sceneID="RmD-b2-gc1">
-            <objects>
-                <viewController id="KLH-BP-bTS" customClass="QuophoViewContorller" customModule="Quopho" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="V6u-ca-SEe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Most Inspiring Quotes ever!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lgo-jT-N7P">
-                                <rect key="frame" x="0.0" y="71" width="375" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="JHL-26-we8"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1td-kR-HFs">
-                                <rect key="frame" x="0.0" y="207" width="375" height="460"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="EM3-cg-dxD" firstAttribute="trailing" secondItem="1td-kR-HFs" secondAttribute="trailing" id="2hE-HW-2JW"/>
-                            <constraint firstItem="1td-kR-HFs" firstAttribute="top" secondItem="Lgo-jT-N7P" secondAttribute="bottom" constant="8" symbolic="YES" id="7OS-k0-h83"/>
-                            <constraint firstItem="1td-kR-HFs" firstAttribute="trailing" secondItem="EM3-cg-dxD" secondAttribute="trailing" id="9ek-dm-KWv"/>
-                            <constraint firstItem="1td-kR-HFs" firstAttribute="bottom" secondItem="EM3-cg-dxD" secondAttribute="bottom" id="BaC-1b-7NN"/>
-                            <constraint firstItem="Lgo-jT-N7P" firstAttribute="top" secondItem="EM3-cg-dxD" secondAttribute="top" constant="7" id="IWb-5I-A8a"/>
-                            <constraint firstItem="Lgo-jT-N7P" firstAttribute="leading" secondItem="1td-kR-HFs" secondAttribute="leading" id="WVb-eu-wT7"/>
-                            <constraint firstItem="EM3-cg-dxD" firstAttribute="bottom" secondItem="1td-kR-HFs" secondAttribute="bottom" id="Y6z-xA-jte"/>
-                            <constraint firstItem="1td-kR-HFs" firstAttribute="leading" secondItem="EM3-cg-dxD" secondAttribute="leading" id="hvm-Ah-cHx"/>
-                            <constraint firstItem="EM3-cg-dxD" firstAttribute="bottom" secondItem="1td-kR-HFs" secondAttribute="bottom" id="lG9-fL-C6z"/>
-                            <constraint firstItem="1td-kR-HFs" firstAttribute="leading" secondItem="EM3-cg-dxD" secondAttribute="leading" id="nBL-Xk-Wds"/>
-                            <constraint firstItem="Lgo-jT-N7P" firstAttribute="trailing" secondItem="1td-kR-HFs" secondAttribute="trailing" id="qnd-0H-XiT"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="EM3-cg-dxD"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="95G-i0-pYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4136.8000000000002" y="131.78410794602701"/>
-        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="5HU-tP-6qT"/>
+    </inferredMetricsTieBreakers>
 </document>

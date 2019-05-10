@@ -196,10 +196,10 @@
 			isa = PBXGroup;
 			children = (
 				461926F9226FD720009D48F9 /* WelcomeViewController.swift */,
-				4645971F2282442E00F0D24C /* PhotoViewController.swift */,
-				4645970F227C755500F0D24C /* QuophoCollectionViewController.swift */,
 				4645970D227C73D600F0D24C /* QuoteViewController.swift */,
+				4645971F2282442E00F0D24C /* PhotoViewController.swift */,
 				4649BC582283B929007A78DC /* ImageUpCloseViewController.swift */,
+				4645970F227C755500F0D24C /* QuophoCollectionViewController.swift */,
 				4649BC5A2283C714007A78DC /* QuophoViewController.swift */,
 			);
 			path = Controllers;

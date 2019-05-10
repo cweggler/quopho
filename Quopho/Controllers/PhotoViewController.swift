@@ -10,7 +10,7 @@ import UIKit
 
 class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    var quoteResult: QuoteResult?
+    var quoteResult: QuoteResult? // need to instantiate this
     let reuseIdentifier = "UIImageCollectionViewCell"
     var searchTerm = "nature"
     
@@ -98,7 +98,8 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
             let selectedIndex = collectionView.indexPathsForSelectedItems?.first?.row
             let selectedImage = photoSet!.images[selectedIndex!]
             let destination = segue.destination as! ImageUpCloseViewController
-            destination.image = selectedImage 
+            destination.image = selectedImage
+            destination.quoteResult = quoteResult
             
         }
     }
