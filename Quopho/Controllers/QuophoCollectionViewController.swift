@@ -47,7 +47,9 @@ class QuophoCollectionViewController: UICollectionViewController, NSFetchedResul
         // set the text
         cell.textView?.text = quopho.quoteText! + " " + quopho.quoteAuthor!
         
-        // TODO: set the image
+        // set the image
+        //what does photoset.images do
+        cell.imageView.image = UIImage(named: "Placeholder")
         
         return cell
         
@@ -62,4 +64,40 @@ class QuophoCollectionViewController: UICollectionViewController, NSFetchedResul
     
     //prepare for segue
     
+}
+
+class PhotoCoreData {
+    let id: String
+    let owner: String
+    let secret: String
+    let server: String
+    let farm: Int32
+    let title: String
+    let isPublic: Int16
+    
+    init(quopho: QuotePhoto) {
+        self.id = quopho.id!
+        self.owner = quopho.owner!
+        self.secret = quopho.secret!
+        self.server = quopho.server!
+        self.farm = quopho.farm
+        self.title = quopho.title!
+        self.isPublic = quopho.ispublic
+    }
+}
+
+class QuotePhotoSet {
+    var photoCoreData: [PhotoCoreData] // Photodata from QuotePhoto core data
+    var images: [FlickrImage]
+    
+    let flickrService = FlickrService()
+    
+    init(photoCoreData: [PhotoCoreData]) {
+        self.photoCoreData = photoCoreData
+        
+        //map each coreData about photos to it's UIImage
+        // realized this next statement DEPENDS on FlickrPhotoData because FlickrImage depends on FlickrPhotoData to initialize
+        self.images = self.photoCoreData.map( { FlickrImage(photoData: $0) } )
+        
+    }
 }

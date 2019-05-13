@@ -28,6 +28,7 @@ class WelcomeViewController: UIViewController {
         }
         else if segue.identifier == "seeCollection" {
             _ = segue.destination as! QuophoCollectionViewController
+            //TODO: Set up managedContext
         }
         else {
             print("What type of segue is this?")
