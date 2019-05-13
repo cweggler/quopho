@@ -88,7 +88,7 @@ class PhotoCoreData {
 
 class QuotePhotoSet {
     var photoCoreData: [PhotoCoreData] // Photodata from QuotePhoto core data
-    var images: [FlickrImage]
+    var images: [CoreDataImage]
     
     let flickrService = FlickrService()
     
@@ -97,7 +97,10 @@ class QuotePhotoSet {
         
         //map each coreData about photos to it's UIImage
         // realized this next statement DEPENDS on FlickrPhotoData because FlickrImage depends on FlickrPhotoData to initialize
-        self.images = self.photoCoreData.map( { FlickrImage(photoData: $0) } )
+        
+        //One idea is to make a CoreDataImage that depends on CoreData to initialize but
+        // trying that with CoreDataImage.swift I wasn't able to get this to map
+        self.images = self.photoCoreData.map( { CoreDataImage(photoData: $0) } )
         
     }
 }
