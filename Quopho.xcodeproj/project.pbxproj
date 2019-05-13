@@ -15,6 +15,7 @@
 		46192705226FD729009D48F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46192703226FD729009D48F9 /* LaunchScreen.storyboard */; };
 		46192710226FD72A009D48F9 /* QuophoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4619270F226FD72A009D48F9 /* QuophoTests.swift */; };
 		4619271B226FD72A009D48F9 /* QuophoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4619271A226FD72A009D48F9 /* QuophoUITests.swift */; };
+		463D56EF2288F1240095D42F /* QuophoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D56EE2288F1240095D42F /* QuophoCell.swift */; };
 		4645970E227C73D600F0D24C /* QuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4645970D227C73D600F0D24C /* QuoteViewController.swift */; };
 		46459710227C755500F0D24C /* QuophoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4645970F227C755500F0D24C /* QuophoCollectionViewController.swift */; };
 		46459712227FB23700F0D24C /* ForismaticAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46459711227FB23700F0D24C /* ForismaticAPIService.swift */; };
@@ -64,6 +65,7 @@
 		46192716226FD72A009D48F9 /* QuophoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuophoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4619271A226FD72A009D48F9 /* QuophoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuophoUITests.swift; sourceTree = "<group>"; };
 		4619271C226FD72A009D48F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		463D56EE2288F1240095D42F /* QuophoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuophoCell.swift; sourceTree = "<group>"; };
 		4645970D227C73D600F0D24C /* QuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewController.swift; sourceTree = "<group>"; };
 		4645970F227C755500F0D24C /* QuophoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuophoCollectionViewController.swift; sourceTree = "<group>"; };
 		46459711227FB23700F0D24C /* ForismaticAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForismaticAPIService.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			children = (
 				464597292282505C00F0D24C /* ErrorAlertController.swift */,
 				4645972D228251DF00F0D24C /* PhotoCell.swift */,
+				463D56EE2288F1240095D42F /* QuophoCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 			files = (
 				461926FA226FD720009D48F9 /* WelcomeViewController.swift in Sources */,
 				4645971A227FD47D00F0D24C /* QuoteError.swift in Sources */,
+				463D56EF2288F1240095D42F /* QuophoCell.swift in Sources */,
 				4649BC5B2283C714007A78DC /* QuophoViewController.swift in Sources */,
 				4645972222824CA000F0D24C /* FlickrService.swift in Sources */,
 				4645972422824D8300F0D24C /* FlickrPhotoData.swift in Sources */,

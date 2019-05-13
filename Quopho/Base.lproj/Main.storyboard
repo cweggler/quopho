@@ -66,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="1076" y="133.5832083958021"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Quopho Collection View Controller-->
         <scene sceneID="sHh-YF-nw5">
             <objects>
-                <collectionViewController id="CxV-jx-wmm" sceneMemberID="viewController">
+                <collectionViewController id="CxV-jx-wmm" customClass="QuophoCollectionViewController" customModule="Quopho" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="u79-IJ-ZQV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,14 +81,14 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="quophoCell" id="eBp-BU-llY">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="QuophoCell" id="eBp-BU-llY" customClass="QuophoCell" customModule="Quopho" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Quote" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7FT-P0-dXn">
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Quote" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7FT-P0-dXn">
                                             <rect key="frame" x="6" y="11" width="136" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -103,6 +103,8 @@
                                 </view>
                                 <size key="customSize" width="150" height="150"/>
                                 <connections>
+                                    <outlet property="imageView" destination="wpv-ib-NJL" id="uMD-qS-fAg"/>
+                                    <outlet property="textView" destination="7FT-P0-dXn" id="WAw-7s-Zru"/>
                                     <segue destination="2YI-NT-Ur0" kind="show" id="0N0-Xi-1BI"/>
                                 </connections>
                             </collectionViewCell>
@@ -117,10 +119,10 @@
             </objects>
             <point key="canvasLocation" x="1076" y="868.51574212893559"/>
         </scene>
-        <!--View Controller-->
+        <!--Quopho View Controller-->
         <scene sceneID="wPi-1O-BSD">
             <objects>
-                <viewController id="2YI-NT-Ur0" sceneMemberID="viewController">
+                <viewController id="2YI-NT-Ur0" customClass="QuophoViewController" customModule="Quopho" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J3i-MH-tP6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -28,7 +28,7 @@ class ImageUpCloseViewController: UIViewController {
         
          print(quoteResult ?? "not good") // for debugging purposes
         
-        // Ask app delegate for the persistentContainer. TODO: set this up in AppDelegate so not needed
+        // Ask app delegate for the persistentContainer.viewContext needed for CoreData
         let appDelegate = UIApplication.shared.delegate as? AppDelegate
         managedContext = appDelegate!.persistentContainer.viewContext
         
@@ -56,8 +56,8 @@ class ImageUpCloseViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "saveQuopho" {
-            // LOOK INTO WHAT DESTINATION YOU WANT
-            //let destination = segue.destination as! QuophoViewController
+            let destination = segue.destination as! QuophoCollectionViewController
+            destination.managedContext = managedContext
         }
     }
     
