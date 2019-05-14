@@ -26,5 +26,7 @@ Also
 ### Available For Download
 download Xcode, this app was made for Swift 4
 clone the repository for this project and then open and run with Xcode
+Please request a Flickr API key from Flickr here- https://www.flickr.com/services/apps/ as a courtesy 
+it's free and then you can reuse the API for another app too.
 
 
