@@ -27,6 +27,7 @@ class QuoteViewController: UIViewController, QuoteDelegate {
         
         saveQuoteButton.isHidden = true
         newQuoteButton.isHidden = true
+        //loading indicator animation here
         
         quoteService.quoteDelegate = self
         quoteService.getRandomQuote()

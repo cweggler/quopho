@@ -10,6 +10,7 @@ import UIKit
 
 class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    // delegate method like Willdisplaycell, check if the index path is the last, and then fetch new for infinite scroll. collectView.reloadData
     var quoteResult: QuoteResult? // need to instantiate this
     let reuseIdentifier = "UIImageCollectionViewCell"
     var searchTerm = "nature"

@@ -87,6 +87,8 @@ class FlickrService {
         task.resume() // very important.
     }
     
+    // you can speed this up more with NSCache
+    
     
 }
 

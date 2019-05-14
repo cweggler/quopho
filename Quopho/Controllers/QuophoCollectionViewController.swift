@@ -14,8 +14,9 @@ class QuophoCollectionViewController: UICollectionViewController, NSFetchedResul
     var managedContext: NSManagedObjectContext?
     var fetchedQuophoController: NSFetchedResultsController<QuotePhoto>?
     var quophos: [QuotePhoto] = []
+    var qPhotoSet: QuotePhotoSet?
     
-    //TODO: Set up a CollectionViewController that can load QuotePhoto entities
+    let flickrservice = FlickrService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,7 @@ class QuophoCollectionViewController: UICollectionViewController, NSFetchedResul
         do {
             try fetchedQuophoController?.performFetch()
             quophos = fetchedQuophoController!.fetchedObjects!
+            self.qPhotoSet = QuotePhotoSet(quopho: quophos)
         } catch {
             print("error fetching your quophos \(error)")
         }
@@ -48,12 +50,35 @@ class QuophoCollectionViewController: UICollectionViewController, NSFetchedResul
         cell.textView?.text = quopho.quoteText! + " " + quopho.quoteAuthor!
         
         // set the image
-        //what does photoset.images do
-        cell.imageView.image = UIImage(named: "Placeholder")
+        guard let qPhotoSet = qPhotoSet else {
+            cell.imageView.image = UIImage(named: "Placeholder")
+            print("first placeholder")
+            return cell
+        }
         
+        if let thumbnail = qPhotoSet.images[indexPath.row].thumbnail {
+            cell.imageView.image = thumbnail
+            print("we're getting a thumbnail")
+        }
+        
+        else {
+            cell.imageView.image = UIImage(named: "Placeholder")
+            requestThumbnail(for: indexPath.row)
+            print("we're requesting a thumbnail, got a placeholder")
+        }
+
         return cell
+   }
+    
+    func requestThumbnail(for index: Int) {
+        let imageData = self.qPhotoSet?.images[index]
         
-        
+        flickrservice.downloadImage(url: imageData!.thumbnailURL!) { (thumbnail: UIImage?, error: Error?) in
+            self.qPhotoSet?.images[index].thumbnail = thumbnail
+            DispatchQueue.main.async {
+                self.collectionView.reloadItems(at: [IndexPath(row: index, section: 0)])
+            }
+        }
     }
     
     
@@ -66,41 +91,34 @@ class QuophoCollectionViewController: UICollectionViewController, NSFetchedResul
     
 }
 
-class PhotoCoreData {
-    let id: String
-    let owner: String
-    let secret: String
-    let server: String
-    let farm: Int32
-    let title: String
-    let isPublic: Int16
-    
-    init(quopho: QuotePhoto) {
-        self.id = quopho.id!
-        self.owner = quopho.owner!
-        self.secret = quopho.secret!
-        self.server = quopho.server!
-        self.farm = quopho.farm
-        self.title = quopho.title!
-        self.isPublic = quopho.ispublic
-    }
-}
-
 class QuotePhotoSet {
-    var photoCoreData: [PhotoCoreData] // Photodata from QuotePhoto core data
+    var photoCoreData: [QuotePhoto] // QuotePhoto core data
     var images: [CoreDataImage]
     
     let flickrService = FlickrService()
     
-    init(photoCoreData: [PhotoCoreData]) {
-        self.photoCoreData = photoCoreData
+    init(quopho: [QuotePhoto]) {
+        self.photoCoreData = quopho
         
-        //map each coreData about photos to it's UIImage
-        // realized this next statement DEPENDS on FlickrPhotoData because FlickrImage depends on FlickrPhotoData to initialize
-        
-        //One idea is to make a CoreDataImage that depends on CoreData to initialize but
-        // trying that with CoreDataImage.swift I wasn't able to get this to map
+        //map each coreData photos only data to it's UIImage
         self.images = self.photoCoreData.map( { CoreDataImage(photoData: $0) } )
-        
     }
+    
+    func downloadThumbnailFor(index: Int, completion: @escaping (UIImage?, Error?) -> Void) {
+        let image = images[index]
+        flickrService.downloadImage(url: image.thumbnailURL!, completion: { (image: UIImage?, error: Error? ) in
+            self.images[index].thumbnail = image
+            completion(image, error)
+        })
+    }
+    
+    var count: Int {
+        return images.count
+    }
+    
+    func photoAt(index: Int) -> QuotePhoto? {
+        return photoCoreData[index]
+    }
+    // another way is to save a file name to CoreData and use the FileManager to save the image
 }
+
