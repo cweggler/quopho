@@ -52,19 +52,16 @@ class QuophoCollectionViewController: UICollectionViewController, NSFetchedResul
         // set the image
         guard let qPhotoSet = qPhotoSet else {
             cell.imageView.image = UIImage(named: "Placeholder")
-            print("first placeholder")
             return cell
         }
         
         if let thumbnail = qPhotoSet.images[indexPath.row].thumbnail {
             cell.imageView.image = thumbnail
-            print("we're getting a thumbnail")
         }
         
         else {
             cell.imageView.image = UIImage(named: "Placeholder")
             requestThumbnail(for: indexPath.row)
-            print("we're requesting a thumbnail, got a placeholder")
         }
 
         return cell

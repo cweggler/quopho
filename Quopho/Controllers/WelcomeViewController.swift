@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class WelcomeViewController: UIViewController {
+    
+    var managedContext: NSManagedObjectContext?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +30,8 @@ class WelcomeViewController: UIViewController {
             _ = segue.destination as! QuoteViewController
         }
         else if segue.identifier == "seeCollection" {
-            _ = segue.destination as! QuophoCollectionViewController
-            //TODO: Set up managedContext
+            let destination = segue.destination as! QuophoCollectionViewController
+            destination.managedContext = managedContext
         }
         else {
             print("What type of segue is this?")
