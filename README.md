@@ -15,12 +15,13 @@ Uses two UICollectionViews, one to show the images the user can select to save, 
 
 ### References
 Taught by Clara James and used some repos to help with project
-https://github.com/claraj/snore_data_ios
-https://github.com/claraj/quotes_api_ios
-https://github.com/claraj/national_park_explorer_ios
-https://github.com/claraj/floor_data_ios
-Also-
-https://github.com/SheldonWangRJT/iOS-Swift4-SearchBar-TableView-iPhoneX
+- https://github.com/claraj/snore_data_ios
+- https://github.com/claraj/quotes_api_ios
+- https://github.com/claraj/national_park_explorer_ios
+- https://github.com/claraj/floor_data_ios
+
+Also
+- https://github.com/SheldonWangRJT/iOS-Swift4-SearchBar-TableView-iPhoneX
 
 ### Available For Download
 download Xcode, this app was made for Swift 4
