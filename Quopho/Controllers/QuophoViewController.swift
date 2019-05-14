@@ -11,20 +11,21 @@ import CoreData
 
 class QuophoViewController: UIViewController, NSFetchedResultsControllerDelegate {
     
-    var managedContext: NSManagedObjectContext? // asking app delegate for managedContext
-    var fetchedQuophoController: NSFetchedResultsController<QuotePhoto>?
+    var managedContext: NSManagedObjectContext?
+    //TODO: Add a way to delete a quopho from CoreData
+    //var fetchedQuophoController: NSFetchedResultsController<QuotePhoto>?
+    //var quophos: [QuotePhoto] = []
     var coreDataImage: CoreDataImage?
     var text: String?
     var flickrService = FlickrService()
     
-    
     @IBOutlet var textView: UITextView!
     @IBOutlet var imageView: UIImageView!
+    @IBOutlet var deleteButton: UIBarButtonItem!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationItem.title = "Your Quopho"
         
         textView.text = text!
         
@@ -43,5 +44,34 @@ class QuophoViewController: UIViewController, NSFetchedResultsControllerDelegate
                 }
             }
         }
+        
+//        let quophoFetch = NSFetchRequest<QuotePhoto>(entityName: "QuotePhoto")
+//        fetchedQuophoController = NSFetchedResultsController<QuotePhoto>(fetchRequest: quophoFetch, managedObjectContext: managedContext!, sectionNameKeyPath: nil, cacheName: nil)
+//
+//        fetchedQuophoController?.delegate = self
     }
+    
+    //TODO: Add a way to delete a quopho from CoreData
+    // Use navigationController!.popViewController(animated: true) for going back
+    @IBAction func deleteQuopho(_ sender: Any) {
+//        do {
+//            //managedContext!.delete(quopho)
+//            //try managedContext!.save()
+//        } catch {
+//
+//        }
+   }
+    
+//    func getQuopho() {
+//        do {
+//            try fetchedQuophoController?.performFetch()
+//            quophos = fetchedQuophoController!.fetchedObjects!
+//            
+//        } catch {
+//            print("error fetching your quopho \(error)")
+//        }
+//    }
+    
+    
+    
 }

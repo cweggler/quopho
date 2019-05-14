@@ -127,28 +127,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Most Inspiring Quotes ever!" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kdp-tx-YNA">
-                                <rect key="frame" x="16" y="81" width="343" height="128"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="99"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cg0-7k-60g">
-                                <rect key="frame" x="0.0" y="207" width="375" height="460"/>
+                                <rect key="frame" x="0.0" y="163" width="375" height="460"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="puE-fd-vgj"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="tX3-Yw-Vha"/>
+                        <barButtonItem systemItem="trash" id="M3B-UV-2Gz">
+                            <connections>
+                                <action selector="deleteQuopho:" destination="2YI-NT-Ur0" id="VZY-Gu-voS"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="deleteButton" destination="M3B-UV-2Gz" id="Y9c-qR-kCO"/>
                         <outlet property="imageView" destination="Cg0-7k-60g" id="7by-wP-fq2"/>
                         <outlet property="textView" destination="kdp-tx-YNA" id="vRd-5G-nFg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5t4-gv-cba" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1785" y="869"/>
+            <point key="canvasLocation" x="1784.8" y="868.51574212893559"/>
         </scene>
         <!--Quote View Controller-->
         <scene sceneID="aCy-7k-Ocv">
