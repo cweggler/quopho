@@ -14,6 +14,7 @@ class ImageUpCloseViewController: UIViewController {
     
     // to handle the Core Data you need a NSManagedObjectContext
     var managedContext: NSManagedObjectContext?
+    
     var quoteResult: QuoteResult?
     var image: FlickrImage?
     var flickrService = FlickrService()
@@ -28,6 +29,9 @@ class ImageUpCloseViewController: UIViewController {
         
          print(quoteResult ?? "not good") // for debugging purposes
         
+        // Still need to ask app delegate for the persistentContainer.viewContext needed for CoreData
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        managedContext = appDelegate!.persistentContainer.viewContext
         
         flickrService.downloadImage(url: url!) { (image: UIImage?, error: Error?) -> Void in
             

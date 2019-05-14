@@ -17,6 +17,7 @@
 		4619271B226FD72A009D48F9 /* QuophoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4619271A226FD72A009D48F9 /* QuophoUITests.swift */; };
 		463D56EF2288F1240095D42F /* QuophoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D56EE2288F1240095D42F /* QuophoCell.swift */; };
 		463D56F1228919450095D42F /* CoreDataImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D56F0228919450095D42F /* CoreDataImage.swift */; };
+		463D56F3228B13600095D42F /* QuotePhotoSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463D56F2228B13600095D42F /* QuotePhotoSet.swift */; };
 		4645970E227C73D600F0D24C /* QuoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4645970D227C73D600F0D24C /* QuoteViewController.swift */; };
 		46459710227C755500F0D24C /* QuophoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4645970F227C755500F0D24C /* QuophoCollectionViewController.swift */; };
 		46459712227FB23700F0D24C /* ForismaticAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46459711227FB23700F0D24C /* ForismaticAPIService.swift */; };
@@ -68,6 +69,7 @@
 		4619271C226FD72A009D48F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		463D56EE2288F1240095D42F /* QuophoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuophoCell.swift; sourceTree = "<group>"; };
 		463D56F0228919450095D42F /* CoreDataImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataImage.swift; sourceTree = "<group>"; };
+		463D56F2228B13600095D42F /* QuotePhotoSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotePhotoSet.swift; sourceTree = "<group>"; };
 		4645970D227C73D600F0D24C /* QuoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteViewController.swift; sourceTree = "<group>"; };
 		4645970F227C755500F0D24C /* QuophoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuophoCollectionViewController.swift; sourceTree = "<group>"; };
 		46459711227FB23700F0D24C /* ForismaticAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForismaticAPIService.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				4645972522824DE700F0D24C /* FlickrImage.swift */,
 				463D56F0228919450095D42F /* CoreDataImage.swift */,
 				4645972722824E5500F0D24C /* FlickrPhotoSet.swift */,
+				463D56F2228B13600095D42F /* QuotePhotoSet.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				46459712227FB23700F0D24C /* ForismaticAPIService.swift in Sources */,
 				463D56F1228919450095D42F /* CoreDataImage.swift in Sources */,
 				4645972A2282505C00F0D24C /* ErrorAlertController.swift in Sources */,
+				463D56F3228B13600095D42F /* QuotePhotoSet.swift in Sources */,
 				4649BC592283B929007A78DC /* ImageUpCloseViewController.swift in Sources */,
 				4645970E227C73D600F0D24C /* QuoteViewController.swift in Sources */,
 				4645972822824E5500F0D24C /* FlickrPhotoSet.swift in Sources */,

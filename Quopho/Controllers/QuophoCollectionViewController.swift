@@ -15,6 +15,8 @@ class QuophoCollectionViewController: UICollectionViewController, NSFetchedResul
     var fetchedQuophoController: NSFetchedResultsController<QuotePhoto>?
     var quophos: [QuotePhoto] = []
     var qPhotoSet: QuotePhotoSet?
+    // another way to deal with images in CoreData for next time instead of QuotePhotoSet
+    // is to save a file name to CoreData and use the FileManager to save/retrieve the image
     
     let flickrservice = FlickrService()
     
@@ -95,37 +97,6 @@ class QuophoCollectionViewController: UICollectionViewController, NSFetchedResul
             destination.text = selectedQuote
         }
     }
-    
 }
 
-class QuotePhotoSet {
-    var photoCoreData: [QuotePhoto] // QuotePhoto core data
-    var images: [CoreDataImage]
-    
-    let flickrService = FlickrService()
-    
-    init(quopho: [QuotePhoto]) {
-        self.photoCoreData = quopho
-        
-        //map each coreData photos only data to it's UIImage
-        self.images = self.photoCoreData.map( { CoreDataImage(photoData: $0) } )
-    }
-    
-    func downloadThumbnailFor(index: Int, completion: @escaping (UIImage?, Error?) -> Void) {
-        let image = images[index]
-        flickrService.downloadImage(url: image.thumbnailURL!, completion: { (image: UIImage?, error: Error? ) in
-            self.images[index].thumbnail = image
-            completion(image, error)
-        })
-    }
-    
-    var count: Int {
-        return images.count
-    }
-    
-    func photoAt(index: Int) -> QuotePhoto? {
-        return photoCoreData[index]
-    }
-    // another way to deal with images in CoreData for next time is to save a file name to CoreData and use the FileManager to save/retrieve the image
-}
 
