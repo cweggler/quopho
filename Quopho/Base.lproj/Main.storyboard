@@ -181,6 +181,10 @@
                                     <action selector="newQuoteButtonTapped:" destination="c7f-ss-hBs" eventType="touchUpInside" id="xO8-gX-dPV"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="eT4-Dc-egH">
+                                <rect key="frame" x="177" y="323" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -195,6 +199,7 @@
                         <viewLayoutGuide key="safeArea" id="pET-RJ-9Vl"/>
                     </view>
                     <connections>
+                        <outlet property="loadingIndicator" destination="eT4-Dc-egH" id="Eak-oR-ZNq"/>
                         <outlet property="newQuoteButton" destination="0S2-Fi-kp5" id="a2Z-X0-cTy"/>
                         <outlet property="quoteTextView" destination="P1V-ie-cot" id="hbS-z5-JT3"/>
                         <outlet property="saveQuoteButton" destination="vGY-Gn-eLs" id="Vvw-ss-bVu"/>

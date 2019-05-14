@@ -13,6 +13,7 @@ class QuoteViewController: UIViewController, QuoteDelegate {
     @IBOutlet var quoteTextView: UITextView!
     @IBOutlet var saveQuoteButton: UIButton!
     @IBOutlet var newQuoteButton: UIButton!
+    @IBOutlet var loadingIndicator: UIActivityIndicatorView!
     
     
     var quoteResult: QuoteResult?
@@ -25,9 +26,9 @@ class QuoteViewController: UIViewController, QuoteDelegate {
         
         navigationItem.title = "Find a Quote"
         
+        loadingIndicator.startAnimating()
         saveQuoteButton.isHidden = true
         newQuoteButton.isHidden = true
-        //loading indicator animation here
         
         quoteService.quoteDelegate = self
         quoteService.getRandomQuote()
@@ -36,6 +37,7 @@ class QuoteViewController: UIViewController, QuoteDelegate {
     
     @IBAction func newQuoteButtonTapped(_ sender: Any) {
         newQuoteButton.isEnabled = false
+        loadingIndicator.startAnimating()
         quoteService.getRandomQuote()
     }
     
@@ -63,6 +65,8 @@ class QuoteViewController: UIViewController, QuoteDelegate {
                 documentAttributes: nil)
             
             self.quoteTextView.attributedText = attributedString
+            self.loadingIndicator.stopAnimating()
+            self.loadingIndicator.isHidden = true
             self.saveQuoteButton.isHidden = false
             self.saveQuoteButton.isEnabled = true
             self.newQuoteButton.isHidden = false
@@ -74,6 +78,8 @@ class QuoteViewController: UIViewController, QuoteDelegate {
     
     func quoteFetchError(because quoteError: QuoteError) {
         let alert = UIAlertController(title: "Error", message: "Error fetching quote. \(quoteError.message)", preferredStyle: .alert)
+        self.loadingIndicator.stopAnimating()
+        self.loadingIndicator.isHidden = true
         alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
         present(alert, animated: true)
         newQuoteButton.isHidden = false
