@@ -32,9 +32,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if let controller = controller as? QuophoCollectionViewController {
                 controller.managedContext = managedContext
             }
+            
+            if let controller = controller as? QuophoViewController {
+                controller.managedContext = managedContext
+            }
         }
-        
-        
         
         return true
     }

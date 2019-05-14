@@ -84,7 +84,17 @@ class QuophoCollectionViewController: UICollectionViewController, NSFetchedResul
         return quophos.count
     }
     
-    //TODO: prepare for segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showQuopho" {
+            let selectedIndex = collectionView.indexPathsForSelectedItems?.first?.row
+            let selectedImage = qPhotoSet!.images[selectedIndex!]
+            let selectedQuote = quophos[selectedIndex!].quoteText! + " -" + quophos[selectedIndex!].quoteAuthor!
+            let destination = segue.destination as! QuophoViewController
+            destination.managedContext = managedContext
+            destination.coreDataImage = selectedImage
+            destination.text = selectedQuote
+        }
+    }
     
 }
 

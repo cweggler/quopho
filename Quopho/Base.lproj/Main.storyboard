@@ -88,7 +88,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Quote" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7FT-P0-dXn">
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Quote" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7FT-P0-dXn">
                                             <rect key="frame" x="6" y="11" width="136" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -104,7 +104,7 @@
                                 <connections>
                                     <outlet property="imageView" destination="wpv-ib-NJL" id="uMD-qS-fAg"/>
                                     <outlet property="textView" destination="7FT-P0-dXn" id="WAw-7s-Zru"/>
-                                    <segue destination="2YI-NT-Ur0" kind="show" id="0N0-Xi-1BI"/>
+                                    <segue destination="2YI-NT-Ur0" kind="show" identifier="showQuopho" id="0N0-Xi-1BI"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -141,6 +141,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="puE-fd-vgj"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="Cg0-7k-60g" id="7by-wP-fq2"/>
+                        <outlet property="textView" destination="kdp-tx-YNA" id="vRd-5G-nFg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5t4-gv-cba" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
