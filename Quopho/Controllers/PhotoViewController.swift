@@ -5,17 +5,21 @@
 //  Created by Cara on 5/7/19.
 //  Copyright © 2019 Cara. All rights reserved.
 //
+// Got some help implementing Searchbar functionality from
+// https://github.com/SheldonWangRJT/iOS-Swift4-SearchBar-TableView-iPhoneX/blob/master/SearchBarInTable/SearchBarInTable/ViewController.swift
 
 import UIKit
 
-class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
     
     // delegate method like Willdisplaycell, check if the index path is the last, and then fetch new for infinite scroll. collectView.reloadData
     var quoteResult: QuoteResult? // need to instantiate this
     let reuseIdentifier = "UIImageCollectionViewCell"
     var searchTerm = "nature"
     
-    //TODO: Add the Search tool functionality
+    //This adds the searchBar for further customization
+    @IBOutlet var searchBar: UISearchBar!
+    
     //TODO: Add the ability to scroll so it shows more pictures
     
     // global variable to retrieve data properly
@@ -33,7 +37,13 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        searchBar.delegate = self
+        searchBar.placeholder = "Nature"
+        searchPhotos()
         
+    }
+    
+    func searchPhotos() {
         flickrservice.searchPhotos(query: searchTerm) { ( photos: [FlickrPhotoData]?, error: Error?) -> Void in
             
             DispatchQueue.main.async {
@@ -43,7 +53,7 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
                 
                 if let photos = photos {
                     if photos.count == 0 {
-                        self.present(ErrorAlertController.alert(message: "No photos found, try another park?"), animated: true)
+                        self.present(ErrorAlertController.alert(message: "No photos found, try entering another search term?"), animated: true)
                     }
                     else {
                         print(photos)
@@ -54,6 +64,23 @@ class PhotoViewController: UIViewController, UICollectionViewDelegate, UICollect
             }
         }
     }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchTerm = searchText
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if searchTerm != "" {
+            searchPhotos()
+            searchBar.resignFirstResponder()
+        } else {
+            searchTerm = "nature"
+            searchPhotos()
+            searchBar.resignFirstResponder()
+        }
+    }
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return photoSet?.count ?? 0

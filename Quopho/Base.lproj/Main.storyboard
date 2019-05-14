@@ -264,6 +264,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="MWm-oE-ykU" id="A0p-qb-11T"/>
+                        <outlet property="searchBar" destination="a5F-Pz-bjU" id="MlI-kg-gPE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v9C-KM-EwQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
