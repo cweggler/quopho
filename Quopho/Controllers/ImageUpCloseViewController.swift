@@ -28,10 +28,6 @@ class ImageUpCloseViewController: UIViewController {
         
          print(quoteResult ?? "not good") // for debugging purposes
         
-        // Ask app delegate for the persistentContainer.viewContext needed for CoreData
-//        let appDelegate = UIApplication.shared.delegate as? AppDelegate
-//        managedContext = appDelegate!.persistentContainer.viewContext
-        
         
         flickrService.downloadImage(url: url!) { (image: UIImage?, error: Error?) -> Void in
             

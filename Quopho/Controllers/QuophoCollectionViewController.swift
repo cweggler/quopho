@@ -84,7 +84,7 @@ class QuophoCollectionViewController: UICollectionViewController, NSFetchedResul
         return quophos.count
     }
     
-    //prepare for segue
+    //TODO: prepare for segue
     
 }
 
@@ -116,6 +116,6 @@ class QuotePhotoSet {
     func photoAt(index: Int) -> QuotePhoto? {
         return photoCoreData[index]
     }
-    // another way is to save a file name to CoreData and use the FileManager to save the image
+    // another way to deal with images in CoreData for next time is to save a file name to CoreData and use the FileManager to save/retrieve the image
 }
 
