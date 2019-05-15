@@ -3,7 +3,7 @@ An app that you can create affirming scenes with calming quotes and pictures
 
 ### About
 Initial page welcomes the user and allows them to view their already made QuotePhoto (called quophos in the app) or go to create a new one
-![](welcomeScreen.png)
+!(welcomeScreen.png)
 
 If the user decides to create a new quopho, they get to this screen that gets random quote data from Forismatic API (http://forismatic.com/en/api/) in English. The user can decide whether to use the quote or query the API database for another quote
 ![](findAQuoteScreen.png)
