@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 
+// this lets the information in CoreData map to urls in Flickr to grab a UIImage
+
 class QuotePhotoSet {
     var photoCoreData: [QuotePhoto] // QuotePhoto core data
     var images: [CoreDataImage]

@@ -8,6 +8,8 @@
 
 import UIKit
 
+// ViewController to show the data from Forismatic API
+
 class QuoteViewController: UIViewController, QuoteDelegate {
     
     @IBOutlet var quoteTextView: UITextView!

@@ -33,6 +33,12 @@
 		4645972E228251DF00F0D24C /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4645972D228251DF00F0D24C /* PhotoCell.swift */; };
 		4649BC592283B929007A78DC /* ImageUpCloseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4649BC582283B929007A78DC /* ImageUpCloseViewController.swift */; };
 		4649BC5B2283C714007A78DC /* QuophoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4649BC5A2283C714007A78DC /* QuophoViewController.swift */; };
+		46FACE64228B88E7005385DD /* collectionOfQuotePhotosScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 46FACE5E228B88E7005385DD /* collectionOfQuotePhotosScreen.png */; };
+		46FACE65228B88E7005385DD /* findAPhotoScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 46FACE5F228B88E7005385DD /* findAPhotoScreen.png */; };
+		46FACE66228B88E7005385DD /* viewQuophoLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = 46FACE60228B88E7005385DD /* viewQuophoLarge.png */; };
+		46FACE67228B88E7005385DD /* viewPhotoScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 46FACE61228B88E7005385DD /* viewPhotoScreen.png */; };
+		46FACE68228B88E7005385DD /* findAQuoteScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 46FACE62228B88E7005385DD /* findAQuoteScreen.png */; };
+		46FACE69228B88E7005385DD /* welcomeScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 46FACE63228B88E7005385DD /* welcomeScreen.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +91,12 @@
 		4645972D228251DF00F0D24C /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		4649BC582283B929007A78DC /* ImageUpCloseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUpCloseViewController.swift; sourceTree = "<group>"; };
 		4649BC5A2283C714007A78DC /* QuophoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuophoViewController.swift; sourceTree = "<group>"; };
+		46FACE5E228B88E7005385DD /* collectionOfQuotePhotosScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = collectionOfQuotePhotosScreen.png; path = ../../FinalProject/collectionOfQuotePhotosScreen.png; sourceTree = "<group>"; };
+		46FACE5F228B88E7005385DD /* findAPhotoScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = findAPhotoScreen.png; path = ../../FinalProject/findAPhotoScreen.png; sourceTree = "<group>"; };
+		46FACE60228B88E7005385DD /* viewQuophoLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = viewQuophoLarge.png; path = ../../FinalProject/viewQuophoLarge.png; sourceTree = "<group>"; };
+		46FACE61228B88E7005385DD /* viewPhotoScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = viewPhotoScreen.png; path = ../../FinalProject/viewPhotoScreen.png; sourceTree = "<group>"; };
+		46FACE62228B88E7005385DD /* findAQuoteScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = findAQuoteScreen.png; path = ../../FinalProject/findAQuoteScreen.png; sourceTree = "<group>"; };
+		46FACE63228B88E7005385DD /* welcomeScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = welcomeScreen.png; path = ../../FinalProject/welcomeScreen.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +127,7 @@
 		461926EB226FD720009D48F9 = {
 			isa = PBXGroup;
 			children = (
+				46FACE57228B7620005385DD /* Screenshots */,
 				461926F6226FD720009D48F9 /* Quopho */,
 				4619270E226FD72A009D48F9 /* QuophoTests */,
 				46192719226FD72A009D48F9 /* QuophoUITests */,
@@ -199,6 +212,19 @@
 				463D56EE2288F1240095D42F /* QuophoCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		46FACE57228B7620005385DD /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				46FACE5E228B88E7005385DD /* collectionOfQuotePhotosScreen.png */,
+				46FACE5F228B88E7005385DD /* findAPhotoScreen.png */,
+				46FACE62228B88E7005385DD /* findAQuoteScreen.png */,
+				46FACE61228B88E7005385DD /* viewPhotoScreen.png */,
+				46FACE60228B88E7005385DD /* viewQuophoLarge.png */,
+				46FACE63228B88E7005385DD /* welcomeScreen.png */,
+			);
+			path = Screenshots;
 			sourceTree = "<group>";
 		};
 		46FBEA05227B9A9200637044 /* Controllers */ = {
@@ -318,9 +344,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46FACE67228B88E7005385DD /* viewPhotoScreen.png in Resources */,
+				46FACE64228B88E7005385DD /* collectionOfQuotePhotosScreen.png in Resources */,
+				46FACE69228B88E7005385DD /* welcomeScreen.png in Resources */,
 				46192705226FD729009D48F9 /* LaunchScreen.storyboard in Resources */,
 				46192702226FD729009D48F9 /* Assets.xcassets in Resources */,
 				461926FD226FD720009D48F9 /* Main.storyboard in Resources */,
+				46FACE66228B88E7005385DD /* viewQuophoLarge.png in Resources */,
+				46FACE65228B88E7005385DD /* findAPhotoScreen.png in Resources */,
+				46FACE68228B88E7005385DD /* findAQuoteScreen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

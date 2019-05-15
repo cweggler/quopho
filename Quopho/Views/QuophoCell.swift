@@ -10,6 +10,8 @@ import UIKit
 
 class QuophoCell: UICollectionViewCell {
     
+    // This is the cellholder for all our created quophos
+    
     @IBOutlet var textView: UITextView!
     @IBOutlet var imageView: UIImageView!
     

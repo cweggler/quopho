@@ -9,7 +9,12 @@
 import Foundation
 import UIKit
 
-// Alot of this taken from the NationalParkExplorer project
+// Alot of this taken from the NationalParkExplorer project found here:
+// https://github.com/claraj/national_park_explorer_ios
+//TODO: To speed this up, you can use NSCache
+
+// This decodes the JSON from Flickr API service
+
 enum FlickrServiceError: Error {
     case RequestFailed
     case CouldNotParseResponse
@@ -19,7 +24,7 @@ enum FlickrServiceError: Error {
 class FlickrService {
     
     // flickr's dev key, or you can try to get your own Dev key!
-    // ENTER DEV KEY HERE
+    // ENTER YOUR DEV KEY HERE
     let apiKey = "36dcfb03f3d16097235c90e2558338d4"
     
     func searchPhotos(query: String, completion: @escaping ([FlickrPhotoData]?, Error?) -> Void ) {
@@ -87,7 +92,7 @@ class FlickrService {
         task.resume() // very important.
     }
     
-    // you can speed this up more with NSCache
+  
     
     
 }

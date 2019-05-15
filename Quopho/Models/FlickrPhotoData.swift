@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+// This holds our results from the Flickr API
+
 struct FlickrResponse: Decodable {
     let photos: FlickrPhotoResponse
 }

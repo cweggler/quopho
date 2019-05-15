@@ -9,8 +9,9 @@
 import UIKit
 import CoreData
 
+// Viewcontroller to show a bigger size photo from the Flickr API, one at a time
+
 class ImageUpCloseViewController: UIViewController {
-    
     
     // to handle the Core Data you need a NSManagedObjectContext
     var managedContext: NSManagedObjectContext?

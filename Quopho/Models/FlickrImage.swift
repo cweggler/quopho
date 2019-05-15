@@ -8,6 +8,9 @@
 
 import UIKit
 
+// This maps the results from the Flickr API to create the url for the image, BEFORE it's saved
+// to CoreData
+
 class FlickrImage {
     
     var photoData: FlickrPhotoData?

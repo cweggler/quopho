@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+// This class decodes JSON grabbed from the Forismatic API
+
 class ForismaticAPIService {
     
     var quoteDelegate: QuoteDelegate?

@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 
+// ViewController that shows your made QuotePhotos (called quophos) 
+
 class QuophoCollectionViewController: UICollectionViewController, NSFetchedResultsControllerDelegate {
     
     var managedContext: NSManagedObjectContext?

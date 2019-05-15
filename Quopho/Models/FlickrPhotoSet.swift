@@ -8,6 +8,8 @@
 
 import UIKit
 
+// This holds the information needed for the imageURL to query FlickrAPI, grabbed from FlickrAPI
+
 class FlickrPhotoSet {
     var photos: [FlickrPhotoData] // Made from the JSON data on the server
     var images: [FlickrImage]     // Image contains UIImage and a wrap UIImage objects for display

@@ -8,6 +8,8 @@
 
 import Foundation
 
+// This is the class to contain the results from the Forismatic API
+
 class QuoteResult: Decodable {
     
     let quoteText: String

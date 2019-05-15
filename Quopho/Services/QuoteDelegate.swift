@@ -8,7 +8,7 @@
 
 import Foundation
 
-// Functions that an object wishing to receive quotes
+// Delegate to hold functions that an object wishing to receive quotes
 // or errors from fetching quotes must implement
 
 protocol QuoteDelegate {

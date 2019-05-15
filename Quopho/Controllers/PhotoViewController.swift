@@ -7,6 +7,7 @@
 //
 // Got some help implementing Searchbar functionality from
 // https://github.com/SheldonWangRJT/iOS-Swift4-SearchBar-TableView-iPhoneX/blob/master/SearchBarInTable/SearchBarInTable/ViewController.swift
+// ViewController to show the photos from Flickr
 
 import UIKit
 

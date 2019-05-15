@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 
+// This is using the info in CoreData to create a URL to grab images from Flickr API 
+
 class CoreDataImage {
     var photoData: QuotePhoto?
     var thumbnail: UIImage?

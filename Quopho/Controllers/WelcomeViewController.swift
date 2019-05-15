@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 
+// ViewController for the Welcome Screen
+
 class WelcomeViewController: UIViewController {
     
     var managedContext: NSManagedObjectContext?

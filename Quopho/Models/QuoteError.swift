@@ -8,6 +8,8 @@
 
 import Foundation
 
+// Let's us give a nicer error message
+
 class QuoteError: Error {
     let message: String
     

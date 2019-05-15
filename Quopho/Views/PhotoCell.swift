@@ -9,6 +9,7 @@
 import UIKit
 
 class PhotoCell: UICollectionViewCell {
+    // This is just the holder for the image when you go to the CollectionViewController
     
     @IBOutlet var image: UIImageView!
 }
